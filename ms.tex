@@ -1,0 +1,493 @@
+%%
+%% Beginning of file 'sample61.tex'
+%%
+%% Modified 2016 September
+%%
+%% This is a sample manuscript marked up using the
+%% AASTeX v6.1 LaTeX 2e macros.
+%%
+%% AASTeX is now based on Alexey Vikhlinin's emulateapj.cls 
+%% (Copyright 2000-2015).  See the classfile for details.
+
+%% AASTeX requires revtex4-1.cls (http://publish.aps.org/revtex4/) and
+%% other external packages (latexsym, graphicx, amssymb, longtable, and epsf).
+%% All of these external packages should already be present in the modern TeX 
+%% distributions.  If not they can also be obtained at www.ctan.org.
+
+%% The first piece of markup in an AASTeX v6.x document is the \documentclass
+%% command. LaTeX will ignore any data that comes before this command. The 
+%% documentclass can take an optional argument to modify the output style.
+%% The command below calls the preprint style  which will produce a tightly 
+%% typeset, one-column, single-spaced document.  It is the default and thus
+%% does not need to be explicitly stated.
+%%
+
+
+% These are my private definitions
+
+\newcommand\LL{\mbox{$\:\lambda\lambda $ }}
+\newcommand\lam{\mbox{$\:\lambda\ $}}
+\newcommand\lamlam{\mbox{$\:\lambda\lambda $ }}
+\newcommand\ha{{H$\alpha$}}
+\newcommand\hb{{H$\beta$}}
+
+%Needs trailing \ except at end of sentence
+\newcommand\BT{B_T}
+\newcommand\MBT{M_{B_T}}
+\newcommand\Mstar{M^*}
+\newcommand\Lstar{L^*}
+\newcommand\Mpc{\:\rm{Mpc}}
+\newcommand\kpc{\:\rm{kpc}}
+\newcommand\pc{\:\rm{pc}}
+\newcommand\kms{\:\rm{km\,s^{-1}}}
+\newcommand\rfid{r_{\rm{fid}}}
+
+\newcommand\LUM{\:{\rm erg\:s^{-1}}}
+\newcommand\FLUX{\:{\rm erg\:cm^{-2}\:s^{-1}}}
+\newcommand\FLUXARCSEC{\:{\rm erg\:cm^{-2}\:s^{-1}\:arcsec^{-2}}}
+\newcommand\COUNTS{\:{\rm cts\:s^{-1}}}
+\newcommand\CPM{\:{\rm s^{-1}\:arcmin^{-2}}}
+\newcommand\VEL{\:{\rm km\:s^{-1}}}
+\newcommand\ETAL{{\it et\:al.}}
+\newcommand\etal{{\it et\:al.}}
+
+\newcommand\OIGS{\:{\rm ergs\:cm^{-2}\:s^{-1}\:\AA^{-1}}}
+%\newcommand\LA{Lyman\thinspace$\alpha$}
+%\newcommand\LB{Lyman\thinspace$\beta$}
+%\newcommand\LG{Lyman\thinspace$\gamma$}
+%def\LD{Lyman\thinspace$\delta$}
+
+%Use Roman numbers to designate ionization state and first two digits
+%of wavelength in Ang. where necessary
+
+\newcommand\OiL{[\ion{O}{1}] $\lambda 6300$}
+\newcommand\OiiL{[\ion{O}{2}] $\lambda\lambda 3727, 3729$}
+\newcommand\oiiL{[\ion{O}{2}] $\lambda 3727$}
+\newcommand\OiiiL{[\ion{O}{3}] $\lambda\lambda 4959,5007$}
+\newcommand\SiiL{[\ion{S}{2}] $\lambda\lambda 6717, 6731$}
+\newcommand\NiiL{[\ion{N}{2}] $\lambda\lambda 6548, 6583$}
+\newcommand\OiLL{[\ion{O}{1}] $\lambda\lambda 6300, 6363$}
+
+\newcommand\sii{[\ion{S}{2}]}
+\newcommand\nii{[\ion{N}{2}]}
+\newcommand\oi{[\ion{O}{1}]}
+\newcommand\oii{[\ion{O}{2}]}
+\newcommand\oiii{[\ion{O}{3}]}
+\newcommand\feii{[\ion{Fe}{2}]}
+\newcommand\hii{\ion{H}{2}}
+\newcommand\hi{\ion{H}{1}}
+\newcommand\perpix{\: \rm pixel^{-1}}
+\newcommand\gal{NGC\,6946}
+
+
+
+%private definitions end here
+
+%\begin{document}
+
+\documentclass[modern]{aastex61}
+%\documentclass{aastex5}
+
+
+%%
+%% using aastex version 6.1
+
+
+%% The default is a single spaced, 10 point font, single spaced article.
+%% There are 5 other style options available via an optional argument. They
+%% can be envoked like this:
+%%
+%% \documentclass[argument]{aastex61}
+%% 
+%% where the arguement options are:
+%%
+%%  twocolumn   : two text columns, 10 point font, single spaced article.
+%%                This is the most compact and represent the final published
+%%                derived PDF copy of the accepted manuscript from the publisher
+%%  manuscript  : one text column, 12 point font, double spaced article.
+%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint2   : two text columns, 12 point font, single spaced article.
+%%  modern      : a stylish, single text column, 12 point font, article with
+%% 		  wider left and right margins. This uses the Daniel
+%% 		  Foreman-Mackey and David Hogg design.
+%%
+%% Note that you can submit to the AAS Journals in any of these 6 styles.
+%%
+%% There are other optional arguments one can envoke to allow other stylistic
+%% actions. The available options are:
+%%
+%%  astrosymb    : Loads Astrosymb font and define \astrocommands. 
+%%  tighten      : Makes baselineskip slightly smaller, only works with 
+%%                 the twocolumn substyle.
+%%  times        : uses times font instead of the default
+%%  linenumbers  : turn on lineno package.
+%%  trackchanges : required to see the revision mark up and print its output
+%%  longauthor   : Do not use the more compressed footnote style (default) for 
+%%                 the author/collaboration/affiliations. Instead print all
+%%                 affiliation information after each name. Creates a much
+%%                 long author list but may be desirable for short author papers
+%%
+%% these can be used in any combination, e.g.
+%%
+%% \documentclass[twocolumn,linenumbers,trackchanges]{aastex61}
+
+%% AASTeX v6.* now includes \hyperref support. While we have built in specific
+%% defaults into the classfile you can manually override them with the
+%% \hypersetup command. For example,
+%%
+%%\hypersetup{linkcolor=red,citecolor=green,filecolor=cyan,urlcolor=magenta}
+%%
+%% will change the color of the internal links to red, the links to the
+%% bibliography to green, the file links to cyan, and the external links to
+%% magenta. Additional information on \hyperref options can be found here:
+%% https://www.tug.org/applications/hyperref/manual.html#x1-40003
+
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+%%
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand\aastex{AAS\TeX}
+\newcommand\latex{La\TeX}
+
+%% Reintroduced the \received and \accepted commands from AASTeX v5.2
+% \received{July 1, 2016}
+%\revised{September 27, 2016}
+%\accepted{\today}
+%% Command to document which AAS Journal the manuscript was submitted to.
+%% Adds "Submitted to " the arguement.
+%\submitjournal{ApJ}
+
+%% Mark up commands to limit the number of authors on the front page.
+%% Note that in AASTeX v6.1 a \collaboration call (see below) counts as
+%% an author in this case.
+%
+%\AuthorCollaborationLimit=3
+%
+%% Will only show Schwarz, Muench and "the AAS Journals Data Scientist 
+%% collaboration" on the front page of this example manuscript.
+%%
+%% Note that all of the author will be shown in the published article.
+%% This feature is meant to be used prior to acceptance to make the
+%% front end of a long author article more manageable. Please do not use
+%% this functionality for manuscripts with less than 20 authors. Conversely,
+%% please do use this when the number of authors exceeds 40.
+%%
+%% Use \allauthors at the manuscript end to show the full author list.
+%% This command should only be used with \AuthorCollaborationLimit is used.
+
+%% The following command can be used to set the latex table counters.  It
+%% is needed in this document because it uses a mix of latex tabular and
+%% AASTeX deluxetables.  In general it should not be needed.
+%\setcounter{table}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% The following section outlines numerous optional output that
+%% can be displayed in the front matter or as running meta-data.
+%%
+%% If you wish, you may supply running head information, although
+%% this information may be modified by the editorial offices.
+\shorttitle{SNRs in NGC6946}
+\shortauthors{Long, Blair \& Winkler}
+%%
+%% You can add a light gray and diagonal water-mark to the first page 
+%% with this command:
+% \watermark{text}
+%% where "text", e.g. DRAFT, is the text to appear.  If the text is 
+%% long you can control the water-mark size with:
+%  \setwatermarkfontsize{dimension}
+%% where dimension is any recognized LaTeX dimension, e.g. pt, in, etc.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% This is the end of the preamble.  Indicate the beginning of the
+%% manuscript itself with \begin{document}.
+%\include{pfw_defns}
+
+
+\usepackage{natbib}
+\usepackage{comment}
+\begin{document}
+%\slugcomment{Draft \today}
+
+
+\title{A Search for Supernova Remnants in NGC\,6946}
+
+%% LaTeX will automatically break titles if they run longer than
+%% one line. However, you may use \\ to force a line break if
+%% you desire. In v6.1 you can include a footnote in the title.
+
+%% A significant change from earlier AASTEX versions is in the structure for 
+%% calling author and affilations. The change was necessary to implement 
+%% autoindexing of affilations which prior was a manual process that could 
+%% easily be tedious in large author manuscripts.
+%%
+%% The \author command is the same as before except it now takes an optional
+%% arguement which is the 16 digit ORCID. The syntax is:
+%% \author[xxxx-xxxx-xxxx-xxxx]{Author Name}
+%%
+%% This will hyperlink the author name to the author's ORCID page. Note that
+%% during compilation, LaTeX will do some limited checking of the format of
+%% the ID to make sure it is valid.
+%%
+%% Use \affiliation for affiliation information. The old \affil is now aliased
+%% to \affiliation. AASTeX v6.1 will automatically index these in the header.
+%% When a duplicate is found its index will be the same as its previous entry.
+%%
+%% Note that \altaffilmark and \altaffiltext have been removed and thus 
+%% can not be used to document secondary affiliations. If they are used latex
+%% will issue a specific error message and quit. Please use multiple 
+%% \affiliation calls for to document more than one affiliation.
+%%
+%% The new \altaffiliation can be used to indicate some secondary information
+%% such as fellowships. This command produces a non-numeric footnote that is
+%% set away from the numeric \affiliation footnotes.  NOTE that if an
+%% \altaffiliation command is used it must come BEFORE the \affiliation call,
+%% right after the \author command, in order to place the footnotes in
+%% the proper location.
+%%
+%% Use \email to set provide email addresses. Each \email will appear on its
+%% own line so you can put multiple email address in one \email call. A new
+%% \correspondingauthor command is available in V6.1 to identify the
+%% corresponding author of the manuscript. It is the author's responsibility
+%% to make sure this name is also in the author list.
+%%
+%% While authors can be grouped inside the same \author and \affiliation
+%% commands it is better to have a single author for each. This allows for
+%% one to exploit all the new benefits and should make book-keeping easier.
+%%
+%% If done correctly the peer review system will be able to
+%% automatically put the author and affiliation information from the manuscript
+%% and save the corresponding author the trouble of entering it by hand.
+
+\correspondingauthor{Knox S Long}
+\email{long@stsci.edu}
+
+\author[0000-0002-4134-864X]{Knox S. Long}
+\affil{Space Telescope Science Institute,
+3700 San Martin Drive,
+Baltimore MD 21218, USA; long@stsci.edu}
+\affil{Eureka Scientific, Inc.
+2452 Delmer Street, Suite 100,
+Oakland, CA 94602-3017}
+
+\author{William P Blair}
+\affiliation{The Henry A. Rowland Department of Physics and Astronomy, 
+Johns Hopkins University, 3400 N. Charles Street, Baltimore, MD, 21218; 
+wpb@pha.jhu.edu}
+
+
+\author{P. Frank Winkler}
+\affiliation{Department of Physics, Middlebury College, Middlebury, VT, 05753; 
+winkler@middlebury.edu}
+
+
+
+
+
+%% Note that the \and command from previous versions of AASTeX is now
+%% depreciated in this version as it is no longer necessary. AASTeX 
+%% automatically takes care of all commas and "and"s between authors names.
+
+%% AASTeX 6.1 has the new \collaboration and \nocollaboration commands to
+%% provide the collaboration status of a group of authors. These commands 
+%% can be used either before or after the list of corresponding authors. The
+%% argument for \collaboration is the collaboration identifier. Authors are
+%% encouraged to surround collaboration identifiers with ()s. The 
+%% \nocollaboration command takes no argument and exists to indicate that
+%% the nearby authors are not part of surrounding collaborations.
+
+%% Mark off the abstract in the ``abstract'' environment. 
+\begin{abstract}
+
+The relatively nearby spiral galaxy NGC6946 is one of the most actively star forming galaxies in the local Universe.
+Here we report on an optical search for SNRs
+
+\end{abstract}
+
+%% Keywords should appear after the \end{abstract} command. 
+%% See the online documentation for the full list of available subject
+%% keywords and the rules for their use.
+\keywords{galaxies: individual (NGC6946) -- galaxies: ISM  -- supernova remnants}
+
+%% From the front matter, we move on to the body of the paper.
+%% Sections are demarcated by \section and \subsection, respectively.
+%% Observe the use of the LaTeX \label
+%% command after the \subsection to give a symbolic KEY to the
+%% subsection for cross-referencing in a \ref command.
+%% You can use LaTeX's \ref and \label commands to keep track of
+%% cross-references to sections, equations, tables, and figures.
+%% That way, if you change the order of any elements, LaTeX will
+%% automatically renumber them.
+
+%% We recommend that authors also use the natbib \citep
+%% and \citet commands to identify citations.  The citations are
+%% tied to the reference list via symbolic KEYs. The KEY corresponds
+%% to the KEY in the \bibitem in the reference list below. 
+
+\section{Introduction} \label{sec:intro}
+
+\gal\ is a nearby \cite[6.72$\pm$ 0.15 Mpc,][]{tikhonov14}, nearly face-on \cite[32.6$\degr$,][]{deblok08} galaxy with four flocculent spiral arms.  The galaxy is currently undergoing a major starburst, and as a result it has been the site of ?? historical SNe. According to ?? the total star formation rate is ??.  A total of 121 bubbles, thought to be created by stellar winds and multiple SN at the sites of some of this SFR have been identified in H1 gas that extends well outside the bright portions of the optical galaxy \citep{boomsma08}.  The high SFR in NGC6946 is thought to be bar-driven.   Given these properties, there should be a large number of SNRs to be found in NGC6946.   
+
+Optically, SNRs are usually identified on the basis of high \sii:\ha\ ratios compared to HII regions.  In bright H II regions, most S is found in the form of S$^{++}$ or S$^{+++}$, and as a result the \sii:\ha\ ratios is 0.1 or smaller.  In SNRs, where emission is shock driven, S$^+$ is found in an extended recombination zone behind the shock and the \sii:ha ratio is typically $\geq$0.4.  The situation becomes more complicated in lower surface brightness HII regions, as recently discussed by \cite{long18} for the case of M33.
+
+The first optical search for SNRs in NGC6946 was made by \cite{matonick97}, hereafter MF97 who used interference filter imagery to identify 27 emission nebulae with \sii:\ha\ ratios $\geq$ 0.45 as SNRs.  One of these sources, MF97-16, was, later associated with the Ultraluminous Black Hole X-ray binary NGC6946 X-1 \cite{roberts03}. Though very rare ULXs have  the hard X-ray spectra  that produce line ratios in the surrounding circumstellar ISM that resemble that expected of SNRs. To our knowledge, no other optical searches for SNRs in NGC6946 exist, nor have spectra of the remaining MF97 objects been obtained.  H II regions and SNRs also radiate at radio wavelengths.  SNRs typically have (steep) non-thermal spectra arising from synchrotron radiation whereas HII regions have (flat) thermal spectra arising from free-free and recombination radiation (check).  At radio wavelengths SNRs in nearby galaxies are generally identified as non-thermal radio sources associated with optical \ha\ emission, that latter requirement arising because many background radio sources also have non-thermal spectra and because generally the SNRs are unresolved in galaxies beyond the Local Group.  In the case of NGC6946,  \cite{lacey01} identified 35 radio-selected SNR candidates on the basis of these criteria, none of which overlap with the MF97 list of optical candidates.  Their candidates were located in the brightest parts of the spiral arms of NGC6946 and they suggested that the reason the two lists do not overlap is primarily due to selection effects.
+
+Here we discuss a new, more sensitive optical search for SNRs in NGC6946 in which we identify a total of ?? SNR candidates using interference filters.  We also discuss spectroscopic observations of ?? of these candidates, which we use to verify  the ratios obtained from the imaging and to characterize our new optical sample.
+
+\section{Observations and Data Reduction \label{sec:observations}}
+\subsection{Imaging}
+
+We carried out narrow-band imaging observations of NGC\,6946 from the 3.5m WIYN telescope and MiniMosaic imager on Kitt Peak on the nights of 2011 June 26-28 (UT).  The so-called ``Minimo'' was mounted at the f/6.3 Nasmyth port and consisted of a pair of $2048\times4096$ SITe chips, with a field  9\farcm 6 square at a scale of 0\farcs 14 pixel$^{-1}$.  We used interference filters that pass lines of \ha, \sii \lamlam6716,6731, and \oiii \lam 5007, plus red and green continuum filters so we could subtract the stars and produce pure emission-line images.  Further observational details are given in Table 1.  It is noteworthy that the \ha\ filter has quite a narrow bandwidth, 27\ \AA\ FWHM. Its transmission is 69\% at the rest wavelength of \ha, but only 11\% at 6548\ \AA\ and 16\% at 6583\ \AA; hence the \nii\ lines are greatly attenuated relative to \ha.\footnote{The recessional velocity of \gal\ is only $40 \kms$, so the lines are redshifted by $\lesssim 1$ \AA.}  This facilitates identification of SNRs based on their \sii:\ha\ ratio.
+
+We used standard IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} techniques for processing the images, including overscan correction, bias subtraction, and flat-fielding using dome flats.  Procedures in the IRAF {\texttt mscred} package were then used to combine the data from the individual chips into a mosaic image for each frame, assigned a WCS for each using stars from the USNOB1 catalog, and then stacked  all the images by   filter onto an arbitrary standard coordinate system with a scale of 0\farcs 20 pixel$^{-1}$.  We then scaled and subtracted the continuum images from the emission-line ones (red from \ha\ and \sii; green from \oiii) to give pure emission-line images with most of the stars removed.  Finally, we used observations of several spectrophotometric standard stars from the catalog of \citet{massey88} to flux calibrate the emission-line images.  Figure 1 shows an RGB version of the final images (R = \ha, G = \sii, B = \oiii).
+
+To select SNR candidates, we displayed continuum-subtracted WIYN images in all three emission lines, as well as \sii:\ha\  and \oiii:\ha\ ratio images, and a continuum image (to distinguish stars from nebulae), all in DS9.   We then visually inspected these to select SNR candidates based on a high  \sii:\ha\ ratio.  The initial inspection was carried out by Middlebury undergraduate Marc DeLaney; subsequently two of us (WPB and PFW) conducted independent inspections, and then we conferred to agree on a consensus list of 146 candidates, including the 27 from MF97.   In addition, we selected 51 candidates with relatively high \oiii:\ha\ ratios, in an attempt to identify young, ejecta-dominated SNRs such as Cas A in the Galaxy.   Though none of these O-selected candidates had ratios as extreme as for Cas A or  1E0102-72.3 in the Small Magellanic Cloud, we nevertheless selected some of these for follow-up spectroscopy.
+
+\subsection{Spectroscopy}
+
+%We used a combination of procedures in the GMOS and apextract packages of IRAF to reduce the spectra.  
+
+We used the Gemini Multi-Object Spectrograph (GMOS) on the 8.2m Gemini-North telescope to obtain all the spectra reported here, during queue-scheduled programs in semesters 2014B (program GN-2014B-Q-83) and 2015B (program GN-2015B-Q-91).  %while the GMOS was equipped with e2V CCD chips. (This is covered below-WPB) 
+For the 2014A program, we designed six custom masks, each with 20-30 slitlets targeting SNR candidates whose positions we determined from our 2011 WIYN images, together with  short $R$-band pre-images of several \gal\ fields taken with GMOS earlier in 2014 as part of the spectroscopy program.    
+We used two additional masks (which we refer to as masks 7 and 8 for simplicity)  for the 2015B program.
+%For both programs we selected objects from the lists of SNR candidates in D10 and in a preliminary version of the catalog that later appeared in B12.
+ %([based on our 2009 Magellan IMACS images) and D10, based on WFC3 images.  
+ Slitlets in one or more of our eight masks were placed on ??? distinct SNR candidates, including ones with a range of sizes, galactocentric radii, and ISM environments (locations in arms and in 
+ inter-arm regions).  In addition to the SNR candidates, we also placed a number of slitlets on prominent \hii\ regions  for comparison purposes in both 2014 and 2015.
+ %\footnote{Exceptions are the very outermost regions of the galaxy, where the sparse population would have made less efficient use of the $5\farcm 5 \times 5\farcm 5$ GMOS field, and the innermost nuclear region, where source confusion and the high star density would have made sky subtraction difficult.}  
+Figure \ref{fig.galaxy} shows all the objects from the {\bf [Need to revise this, make a figure, and get correct numbers]} B12, D10, and B14 catalogs, and highlights those for which we obtained spectra (red boxes).  %, and Table \ref{obs_log} lists all the SNR candidates for which we obtained spectra.
+
+For all the spectra we used GMOS-N with the 600 lines\,mm$^{-1}$ grating designated G5307 and a GG455 cut-off filter to block second-order spectra.   The detector in both years was a mosaic of three e2v deep depletion CCD chips, binned $\times 2$ in the spatial direction (for a scale of 0\farcs 146 pixel$^{-1}$) and $\times 4$ in the dispersion direction.  
+The dispersion was 1.84 \AA\,  pixel$^{-1}$ (binned), resulting in coverage of the spectral range of at least \hb\ through \sii\lamlam 6716,\,6731 for virtually all the objects.\footnote{The wavelength coverage naturally varied with slitlet position in the dispersion direction.}  Our  masks had  slitlet  widths from 1\farcs 25 to 1\farcs 75, with wider slits used for the larger objects, and lengths of 6\arcsec\ or longer to permit local background sky subtraction.   
+
+%In this section we provide the observational details for imaging and spectroscopy of M83 and the SNR candidates. 
+
+With each mask, we took spectra at three or four different wavelength settings, to cover wavelength gaps between chips and to gain somewhat more total spectral range.\footnote{An exception was mask 6, done late in the 2014B semester, for which our planned observations remained incomplete.}  At each wavelength setting, we obtained two or more identical exposures to minimize the effects of cosmic rays.
+For calibration, we programmed quartz flats and CuAr arc frames  immediately before or after the science exposures with each mask and wavelength setting.  A journal of all the science observations from both the 2014 and 2015 appears in Table \ref{obs_log}.  
+%During the 2015A semester, the e2v CCDs in GMOS-S had  been replaced with a mosaic of Hamamatsu CCDs.  Unfortunately, one of these chips soon developed a problem with one of the amplifiers that resulted in data loss from a portion of the detector. To work around the amplifier problem, we used five widely spaced wavelength settings in order to bridge over sections of the detector where data were missing, and took a set of three frames at each setting to eliminate cosmic rays. 
+%We were able to work around this by using several widely spaced wavelength settings in order to bridge over sections of the detector where data were missing.  (Removed redndancy--WPB)
+
+The data were processed using standard procedures for bias subtraction, flat-fielding, wavelength calibration, and flux calibration (based on baseline GMOS observations of a few spectrophotometric standard stars) from the {\tt gemini} package in IRAF.\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.}  During the processing, the 2-D spectra from different slitlets were separated to give individual 2-D spectra from each slitlet.   We examined each of these individually and selected the object region, as well as one or more sky background regions,  stripped out 1-D spectra of each, and then subtracted the sky spectrum from the corresponding object to obtain the final object spectra.
+  Many of the objects are located in regions with bright surrounding galactic background (both continuum and emission lines) from NGC\,6946, so the ability to choose a representative  local background was often a source of uncertainty.   {\bf [Knox, you should edit this paragraph if necessary.]}
+%summed the rows containing each object to give  flux-calibrated 1-D spectra.
+
+{\bf [the following is vestigial from M83 paper, but we will likely have similar tables and language here.]} Tables \ref{table-SNR} and \ref{table-O3} list all the SNR candidates for which we obtained spectra.  In both tables, column 1 gives the object name from  the B12, B14, and/or D10 lists; column 2 provides some alternative names for the objects, columns 3 and 4 give the position; column 5 the diameter (assuming a distance to M83 of 4.61 Mpc).  Most of the objects lie within the footprint of the WFC3 observations, and for the great majority of these we measured the diameters from the WFC3 images.  For candidates in the outer galaxy, plus a few low-surface-brightness ones within the WFC3 footprint, we used the Magellan images instead, adjusted for seeing.   Column 6 gives the galactocentric distance; and column 7 notes objects that were detected in the {\em Chandra} ACIS X-ray survey by \citet{long14}.  Column 8 gives the mask and slitlet number used for extracting the one-dimensional spectra.  Several objects were observed with more than one mask; listed here is the one with the highest signal-to-noise ratio.   As an indication that the sample with spectra is representative of the overall population of SNR candidates in M83, we show  histograms of number vs.\ diameter in Fig.~\ref{fig_histograms}a and of number vs.\ galactocentric distance in Fig.~\ref{fig_histograms}b. The singular exception is that we purposely ignored the crowded central starburst region since spectra in this region would have been too confused.
+
+
+\section{Summary \label{sec:summary}}
+
+This is a citation to \cite{long14}0
+
+\acknowledgments
+
+We thank NASA and everyone for allowing us time to work on this
+
+\pagebreak
+
+\bibliographystyle{aasjournal}
+
+\bibliography{snr}
+
+\clearpage
+
+\input{table1}
+
+\input{table2}
+
+\input{table_candidates}
+
+\input{table_spectra}
+
+
+%% To help institutions obtain information on the effectiveness of their 
+%% telescopes the AAS Journals has created a group of keywords for telescope 
+%% facilities.
+%
+%% Following the acknowledgments section, use the following syntax and the
+%% \facility{} or \facilities{} macros to list the keywords of facilities used 
+%% in the research for the paper.  Each keyword is check against the master 
+%% list during copy editing.  Individual instruments can be provided in 
+%% parentheses, after the keyword, but they are not verified.
+
+\begin{figure}
+\plotone{rgb_10arcmin_subtracted_2.png}
+\caption{An emission-line image of \gal, after continuum subtraction, where R = \ha, G = \sii, and B = \oiii.  The field is 10\arcmin\ square and is oriented N up, E left. }
+\end{figure}
+
+\begin{figure}
+\plotone{rgb_10arcmin_no_regions.png}
+\caption{An emission-line image of \gal, where R = \ha, G = \sii, and B = \oiii.  The field is 10\arcmin\ square and is oriented N up, E left.  [Probably we will show {\bf only} one of these: before or after subtraction.] }
+\end{figure}
+
+\vspace{5mm}
+\facilities{NOAO:WYIN,
+Gemini:GMOS}
+
+%% Similar to \facility{}, there is the optional \software command to allow 
+%% authors a place to specify which programs were used during the creation of 
+%% the manusscript. Authors should list each code and include either a
+%% citation or url to the code inside ()s when available.
+
+\software{astropy \citep{astropy} 
+%          Cloudy \citep{2013RMxAA..49..137F}, 
+ %         SExtractor \citep{1996A&AS..117..393B}
+          }
+
+%% Appendix material should be preceded with a single \appendix command.
+%% There should be a \section command for each appendix. Mark appendix
+%% subsections with the same markup you use in the main body of the paper.
+
+%% Each Appendix (indicated with \section) will be lettered A, B, C, etc.
+%% The equation counter will reset when it encounters the \appendix
+%% command and will number appendix equations (A1), (A2), etc. The
+%% Figure and Table counter will not reset.
+
+%\appendix
+
+
+
+%% The reference list follows the main body and any appendices.
+%% Use LaTeX's thebibliography environment to mark up your reference list.
+%% Note \begin{thebibliography} is followed by an empty set of
+%% curly braces.  If you forget this, LaTeX will generate the error
+%% "Perhaps a missing \item?".
+%%
+%% thebibliography produces citations in the text using \bibitem-\cite
+%% cross-referencing. Each reference is preceded by a
+%% \bibitem command that defines in curly braces the KEY that corresponds
+%% to the KEY in the \cite commands (see the first section above).
+%% Make sure that you provide a unique KEY for every \bibitem or else the
+%% paper will not LaTeX. The square brackets should contain
+%% the citation text that LaTeX will insert in
+%% place of the \cite commands.
+
+%% We have used macros to produce journal name abbreviations.
+%% \aastex provides a number of these for the more frequently-cited journals.
+%% See the Author Guide for a list of them.
+
+%% Note that the style of the \bibitem labels (in []) is slightly
+%% different from previous examples.  The natbib system solves a host
+%% of citation expression problems, but it is necessary to clearly
+%% delimit the year from the author name used in the citation.
+%% See the natbib documentation for more details and options.
+% \nocite{}
+%\begin{thebibliography}{}
+
+%\bibliography{snr}
+
+%\end{thebibliography}
+
+%% This command is needed to show the entire author+affilation list when
+%% the collaboration and author truncation commands are used.  It has to
+%% go at the end of the manuscript.
+%\allauthors
+
+%% Include this line if you are using the \added, \replaced, \deleted
+%% commands to see a summary list of all changes at the end of the article.
+%\listofchanges
+
+\end{document}
+
+% End of file `sample61.tex'.

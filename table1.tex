@@ -1,0 +1,33 @@
+\begin{deluxetable}{ccrr}
+%\tabletypesize{\scriptsize}
+%\rotate
+%\tablewidth{600pt}
+\tablewidth{0pt}
+\tablecaption{WIYN Imaging Observations of NGC\,6946}
+
+\tablehead{
+\colhead {} & \multicolumn{2}{c}{Filter} & \colhead {}\\ 
+\cline{2-3}  
+\colhead{Designation} &
+%\colhead{Designation} &
+\colhead{$\rm \lambda_{c}$(\AA)} &
+%\colhead{$\rm \lambda_{c}[corr]$(\AA)\tablenotemark{b}} &
+\colhead{$\Delta \lambda$(\AA)\tablenotemark{a}} &
+\colhead {Exposure (s)} 
+}
+
+\startdata
+\oiii &  5010 &60\phn\phn & $11\times800$ \phn\phn  \\
+Green Continuum  & 5127& 100\phn\phn&$11\times500$ \phn\phn \\
+H$\alpha$  & 6563 & 27\phn\phn    & $10\times800$ \phn\phn \\
+\sii\tablenotemark{b} & 6723 & 63\phn\phn & $10\times800$ \phn\phn  \\
+Red Continuum  & 6840& 93\phn\phn &$10\times600$ \phn\phn \\
+\enddata
+
+%\tablenotetext{a}{Nominal central wavelength.}
+\tablenotetext{a}{Full width at half maximum in the WIYN f/6.3 beam.}
+\tablenotetext{b}{WIYN Observatory filter W037; other filters are PFW custom.}
+
+\label{imaging_obsns}
+\end{deluxetable}
+
