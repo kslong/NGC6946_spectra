@@ -353,7 +353,6 @@ To select SNR candidates, we displayed continuum-subtracted WIYN images in all t
 
 The SNR candidates are listed in right ascension order in Table \ref{table_candidates}.  For each candidate, we provide (1) a source name, (2) the name of the source in MF97 if any,  (3,4) the position  (J2000), (5) the galactocentric radios, (6) the \ha flux as derived from the emission line images, (7) the [SII]:\ha\ ratio measured from the images, (8) the spectrum we used to confirm the imaging ratios (see below) , and (9) whether or not the object had a spectroscopic [SII]:\ha\ ratio greater than 0.4.
 
-\todo[inline]{Why is ref for this table not picked up?  We need to describe the table in the text here.}
 
 \subsection{Spectroscopy}
 
@@ -382,14 +381,17 @@ For calibration, we programmed quartz flats and CuAr arc frames  immediately bef
 %We were able to work around this by using several widely spaced wavelength settings in order to bridge over sections of the detector where data were missing.  (Removed redndancy--WPB)
 
 The data were processed using standard procedures for bias subtraction, flat-fielding, wavelength calibration, and flux calibration (based on baseline GMOS observations of a few spectrophotometric standard stars) from the {\tt gemini} package in IRAF.\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.}  During the processing, the 2-D spectra from different slitlets were separated to give individual 2-D spectra from each slitlet.   We examined each of these individually and selected the object region, as well as one or more sky background regions,  stripped out 1-D spectra of each, and then subtracted the sky spectrum from the corresponding object to obtain the final object spectra.
-  Many of the objects are located in regions with bright surrounding galactic background (both continuum and emission lines) from NGC\,6946, so the ability to choose a representative  local background was often a source of uncertainty.   {\bf [Knox, you should edit this paragraph if necessary.]}
-%summed the rows containing each object to give  flux-calibrated 1-D spectra.
+  Many of the objects are located in regions with bright surrounding galactic background (both continuum and emission lines) from NGC\,6946, so the ability to choose a representative  local background was often a source of uncertainty.  
+  We then performed  fits to obtain emission line fluxes  from the spectra.  For these fits, we assumed Gaussian profiles.  We performed fits for various lines and line complexes, specifically for \hb alone, for the [O III] doublet, for the [O I] doublet, for the \ha-[N II] region, and  for the [S II] doublet. For the fits, we assumed that the background varied linearly with wavelength around each line, and that the FWHM of the lines in each line in a complex was the same.
+  
+  
+  %summed the rows containing each object to give  flux-calibrated 1-D spectra.
 
 \todo[inline]{It would probably be good to include a figure showing a few example spectra, as in M83 paper, Fig 3.}
 
-Table \ref{table_snr_spec}  lists all the SNR candidates for which we obtained spectra.   
+Table \ref{table_snr_spec}  lists the information we obtained for the SNR candidates for which we obtained spectra.    Specifically we list (1) the source name, (2) the extracted  \ha\ flux, (3-9) ratios of various emission lines to \ha\ taken to be 300, (10) the total [SII]:\ha\ ratio and (11) the measured FWHM of the lines in the \ha-[N II] complex.  For doublets, where the line ratio is constrained by atomic physics, that is [O III], [O I], and [N II], we have listed only the stronger line.  We visually inspected all of the spectra and the fits to them; values which we judge to be more uncertain are shown as approximate.  No allowance has been made for systematic errors associated with difficulties in background subtraction.  A number of the objects were observed several times, sometimes with different slit orientations.  In these cases, we report the spectrum which we judge to be the most accurate.  The spectrum used is listed in Table \ref{table_candidates}, where 05.18 should be interpreted as slit number 18 in mask 5.
 
-\todo[inline]{The table needs to be described.  Tables 3 \& 4 need to be modified with longtable, or something, so they will carry over to multiple pages.}
+
 
 \section{Discussion}
 Here are some figures we may wish to show, and points we may want to discuss (note: KSL has done some of these figures on Evernote; those all show \oiii-selected objects, which we may choose to omit):
