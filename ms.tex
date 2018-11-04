@@ -347,11 +347,11 @@ We carried out narrow-band imaging observations of NGC\,6946 from the 3.5m WIYN 
 
 We used standard IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} techniques for processing the images, including overscan correction, bias subtraction, and flat-fielding using dome flats.  Procedures in the IRAF {\texttt mscred} package were then used to combine the data from the individual chips into a mosaic image for each frame, assigned a WCS for each using stars from the USNOB1 catalog, and then stacked  all the images by   filter onto an arbitrary standard coordinate system with a scale of 0\farcs 20 pixel$^{-1}$.  We then scaled and subtracted the continuum images from the emission-line ones (red from \ha\ and \sii; green from \oiii) to give pure emission-line images with most of the stars removed.  Finally, we used observations of several spectrophotometric standard stars from the catalog of \citet{massey88} to flux calibrate the emission-line images.  Figure \ref{fig_overview} shows an RGB version of the final images (R = \ha, G = \sii, B = \oiii).
 
-To select SNR candidates, we displayed continuum-subtracted WIYN images in all three emission lines, as well as \sii:\ha\  and \oiii:\ha\ ratio images, and a continuum image (to distinguish stars from nebulae), all in DS9.   We then visually inspected these to select SNR candidates based on a high  \sii:\ha\ ratio.  The initial inspection was carried out by Middlebury undergraduate Marc DeLaney; subsequently two of us (WPB and PFW) conducted independent inspections, and then we conferred to agree on a consensus list of 147 candidates, including the 27 from MF97.   In addition, we selected 51 candidates with relatively high \oiii:\ha\ ratios, in an attempt to identify young, ejecta-dominated SNRs such as Cas A in the Galaxy.   Though none of these O-selected candidates had ratios as extreme as for Cas A or  1E0102-72.3 in the Small Magellanic Cloud, we nevertheless selected some of these for follow-up spectroscopy.  Finally, we inspected the positions of all nine\footnote{As of the 2011 observations; a tenth SN was recorded in 2017.} historical SNe in NGC\,6946 for evidence of nebular emission.  
+To select SNR candidates, we displayed continuum-subtracted WIYN images in all three emission lines, as well as \sii:\ha\  and \oiii:\ha\ ratio images, and a continuum image (to distinguish stars from nebulae), all in DS9.   We then visually inspected these to select SNR candidates based on a high  \sii:\ha\ ratio.  The initial inspection was carried out by Middlebury undergraduate Marc DeLaney; subsequently two of us (WPB and PFW) conducted independent inspections, and then we conferred to agree on a consensus list of 147 candidates, including the 27 from MF97.   In addition, we selected 51 candidates with relatively high \oiii:\ha\ ratios, in an attempt to identify young, ejecta-dominated SNRs such as Cas A in the Galaxy.   Though none of these O-selected candidates had ratios as extreme as for Cas A or  1E0102-72.3 in the Small Magellanic Cloud, we nevertheless selected some of these for follow-up spectroscopy.  Finally, we inspected the positions of all nine\footnote{As of the 2011 observations; a tenth SN was recorded in 2017.} historical SNe in NGC\,6946 for evidence of nebular emission. 
 
 \todo[inline]{Note which of these have emission.}
 
-The SNR candidates are listed in Table \ref{table_candidates}.
+The SNR candidates are listed in right ascension order in Table \ref{table_candidates}.  For each candidate, we provide (1) a source name, (2) the name of the source in MF97 if any,  (3,4) the position  (J2000), (5) the galactocentric radios, (6) the \ha flux as derived from the emission line images, (7) the [SII]:\ha\ ratio measured from the images, (8) the spectrum we used to confirm the imaging ratios (see below) , and (9) whether or not the object had a spectroscopic [SII]:\ha\ ratio greater than 0.4.
 
 \todo[inline]{Why is ref for this table not picked up?  We need to describe the table in the text here.}
 
@@ -425,11 +425,21 @@ We thank NASA and everyone for allowing us time to work on this.  PFW acknowledg
 
 \input{table2}
 
+\startlongtable
+
+\clearpage
+
+
+
 \input{table_candidates}
+
+\pagebreak
+
+\startlongtable
 
 \input{table_spectra}
 
-
+\pagebreak
 %% To help institutions obtain information on the effectiveness of their 
 %% telescopes the AAS Journals has created a group of keywords for telescope 
 %% facilities.
