@@ -395,15 +395,21 @@ Table \ref{table_snr_spec}  lists the information we obtained for the SNR candid
 
 \section{Analysis and Discussion}
 
-We identified 147 candidate SNRs from the WYIN interference images; of these we obtained spectra of 102. The spectra were needed to improve our confidence that the [SII]:\ha\ ratios of the emission nebulae were indeed high and to begin to characterize the SNRs.  The spectroscopic ratios are shown as a function of galactocentric radious in Fig.\ \ref{fig_s2_ha}.  Conventionally, emission nebulae are identified as SNRs optically, if the [SII]:\ha\ ratio exceeds 0.4; 89 of the 102 SNRs with spectra satisfy this criterion, and so we regard these as confirmed SNRs (and they have been listed as such in Table \ref{table_candidates}. Clearly, even though a dividing line of 0.4 is somewhat arbitrary, the other objects should be judged we more suspicion. There are 45 objects without a spectra, so which of these are actually SNRs is uncertain.
+We identified 147 candidate SNRs from the WYIN interference images; of these we obtained spectra of 102. The spectra were needed to improve our confidence that the [SII]:\ha\ ratios of the emission nebulae were indeed high and to begin to characterize the SNRs.  The spectroscopic ratios are shown as a function of galactocentric radius in the left panel of  Fig.\ \ref{fig_s2_ha}.  Conventionally, emission nebulae are identified as SNRs optically, if the [SII]:\ha\ ratio exceeds 0.4; 89 of the 102 SNRs with spectra satisfy this criterion, and so we regard these as confirmed SNRs (and they have been listed as such in Table \ref{table_candidates}. Clearly, even though a dividing line of 0.4 is somewhat arbitrary, the other objects should be judged we more suspicion.  The tendency to see higher SII]:\ha\ ratios closer to the nucleus is most likely at least partly an abundance effect; similar trends are seen in M33 \citep{long18} and in M83 \citep{winkler17}. 
 
-\todo[inline]{Find out how many of the MF objects are confirmed.  Make a plote of the imaging and spectroscopic ratios}
+There are 45 objects without a spectra, so which of these are actually SNRs is uncertain.  That said, as shown in the right panel of Fig.\ \ref{fig_s2_ha} the spectroscopically determined ratio tend to be if anything higher than the ratio determined from narrow band imaging, and so most of the objects without spectra are likely to be good optical SNRs.  That the spectroscopic ratios tend to be higher than the imaging ratios is expected, since the \ha\ filter also passes some emission from [N II].   
+
+Of the 27 SNR candidates identified by MF97, all have imaging [SII]:\ha\ ratios that exceed 0.4. MF97 obtained spectra of six of their candidates.  We have obtained spectra of 23 of the MF97 objects, including new spectra of the 5 objects for which MF97 had spectra. Four -- MF003, MF021, MF022, and MF026 -- were observed spectroscopically.  All of these have measured spectroscopic ratios exceed 0.4.
+
+\todo[inline]{We need a more complete discussion of MF97 and our results.  Possibly this is something wpb could do}
+
+
 
 Here are some figures we may wish to show, and points we may want to discuss (note: KSL has done some of these figures on Evernote; those all show \oiii-selected objects, which we may choose to omit):
 \begin{enumerate}
-    \item Correlation between flux from spectra vs imaging (M83 paper, fig 5)
-    \item \sii:\ha\ ratio vs \ha\ flux; \sii:\ha\ ratio vs GC distance (fig for this already here)  Check M83 to see if there is a correlation in the spectroscopic ratio with GC, and if so comment on this
-    \item We don't give any diameter values for objects.  WIYN data are not great for this, but may be worth something.  Also, aren't there WFC3 Pa$\beta$(?) images; are these useful for getting diameters? There are also a handful of \ha\ images (from ACS or WFC2) which should be useful.  If we are to use these, we need to add another short subsection under Observations.
+    \item Correlation between flux from spectra vs imaging (M83 paper, fig 5)  ksl - I have looked at this.  The correlation is there but quite rough.  I'm not sure it is helpful for the paper
+    \item \sii:\ha\ ratio vs \ha\ flux; \sii:\ha\ ratio vs GC distance (fig for this already here)  Check M83 to see if there is a correlation in the spectroscopic ratio with GC, and if so comment on this.  This is done for S2; I guess we could to it for N2
+    \item We don't give any diameter values for objects.  WIYN data are not great for this, but may be worth something.  Also, aren't there WFC3 Pa$\beta$(?) images; are these useful for getting diameters? There are also a handful of \ha\ images (from ACS or WFC2) which should be useful.  If we are to use these, we need to add another short subsection under Observations.  We do not have diameters, so I don't think we can do this 00 ksl
     \item \hb:\ha\ ratio vs GC Distance: done in Evernote; this indicates that reddening is severe throughout \gal, and is most severe near the center.  Happily, this has little effect on the relative strengths of the most interesting lines: \oi, \ha, \nii, and \sii.
     \item Gradients: \nii:\ha\ and \sii:\ha\ vs GCD (M83 paper, fig 8)
     \item Comparison to shock models (see existing figure).  This appears to indicate abundances between that of LMC and that of the Galaxy (?)
@@ -470,8 +476,8 @@ We thank NASA and everyone for allowing us time to work on this.  PFW acknowledg
 \end{figure}
 
 \begin{figure}
-\plotone{fig_s2_ha_ratio_distance.pdf}
-\caption{The [S II]:\ha\ ratio for SNR candidates as a function of galactocentric radius.  Objects with ratios greater than 0.4 (the dashed line) are spectroscopically confirmed. \label{fig_s2_ha}}
+\plottwo{fig_s2_ha_ratio_distance.pdf}{fig_spec_im_comp.pdf}
+\caption{Left: The [S II]:\ha\ ratio obtained spectroscopically for SNR candidates as a function of galactocentric radius.  Objects with ratios greater than 0.4 (the dashed line) are spectroscopically confirmed.  Right: The [S II]:\ha\ ratio derived from spectra compared to that derived from narrow band imaging \label{fig_s2_ha}}
 
 \end{figure}
 
