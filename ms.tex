@@ -309,7 +309,7 @@ Two of the historical supernovae were detected as young optical SNRs showing hig
 %% keywords and the rules for their use.
 \keywords{galaxies: individual (NGC~6946) -- galaxies: ISM  -- supernova remnants}
 
-\todo[inline]{WPB: This will likely have to get shortened further before submission.}
+% \todo[inline]{WPB: This will likely have to get shortened further before submission.}
 
 %% From the front matter, we move on to the body of the paper.
 %% Sections are demarcated by \section and \subsection, respectively.
@@ -348,14 +348,15 @@ We carried out narrow-band imaging observations of \gal\ from the 3.5m WIYN tele
 
 We used standard IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} techniques for processing the images, including overscan correction, bias subtraction, and flat-fielding using dome flats.  Procedures in the IRAF {\texttt mscred} package were then used to combine the data from the individual chips into a mosaic image for each frame, assigned a WCS for each using stars from the USNOB1 catalog (WPB: ref needed?).  We then stacked  all the images by filter onto an arbitrary standard coordinate system with a scale of 0\farcs 20 pixel$^{-1}$ and scaled and subtracted the continuum images from the emission-line ones (red from \ha\ and \sii; green from \oiii) to give pure emission-line images with most of the stars and galaxy background light removed.  Finally, we used observations of several spectrophotometric standard stars from the catalog of \citet{massey88} to flux calibrate the emission-line images.  Figure \ref{fig_overview} shows a color version of the final images (R = \ha, G = \sii, B = \oiii).
 
-\todo[inline]{WPB: For the Overview Figure, I like the version that shows the galaxy light (currently Fig. 2).  Then in addition to the overview figure, we should show an enlargement of a smaller region in a multi-panel format, showing the subtracted data.  Perhaps this could be done in conjunction with the following paragraph:  Show a small region with several \hii\ regions and SNRs, where the color panel shows the SNRs standing out in different color.  Could include ratio panels as well.} 
+\todo[inline]{For the Overview Figure, ksl and wpb like the version that shows the galaxy light (currently Fig. 2).  Frank is responsible for updating the overview figures, and describing them in the text.  Bill is responsible for one or more snap shot  region figures to show what objects we select. Then in addition to the overview figure, we should show an enlargement of a smaller region in a multi-panel format, showing the subtracted data.  He is also responsible for the associated text. .} 
 
 To select SNR candidates, we used the DS9 display program to show the continuum-subtracted WIYN images in all three emission lines, as well as \sii:\ha\  and \oiii:\ha\ ratio images, and a continuum image (to distinguish stars  or stellar subtraction residuals from point-like nebulae).   We then visually inspected these to select SNR candidates based on a high  \sii:\ha\ ratio.  The initial inspection was carried out by Middlebury undergraduate Marc DeLaney; subsequently two of us (WPB and PFW) conducted independent inspections, and then we conferred to agree on a consensus list of 147 candidates, including the 27 from MF97.   In addition, we selected 51 objects with relatively high \oiii:\ha\ ratios, in an attempt to identify young, ejecta-dominated SNRs such as Cas A in the Galaxy. With ten SNe in the last century, one might expect a number of young, ejecta-dominated SNRs to be present.  Though none of the O-selected candidates had ratios as extreme as seen for Cas A or 1E0102-72.3 in the Small Magellanic Cloud, we nevertheless selected some of these for follow-up spectroscopy.  Finally, we inspected the positions of the nine\footnote{As of the 2011 observations there were nine SNe; a tenth SN was recorded in 2017.} historical SNe in \gal\ for evidence of nebular emission, and detected line emission only at the positions of SN1980K and SN2004et, both of which we targeted for follow-up spectra.
 
-\todo[inline]{Add symbols to Fig. 1 overview and reference the Figure again here?  I note below we intend to also indicate those observed spectroscopically with a separate symbol or different color.  Could be tricky. WPB}
+\todo[inline]{ksl - It might be worthwhile to have a few sentences of comparison here to our work on M83 where the Magellen seeing made if far easier to see extended emission, and in M33 of course where all of the SNRs are resolved.  This is about the limit of what we can do from the ground, particularly with the seeing we had with WYIN.  To do better, one needs better seeing.}
 
 The SNR candidates are listed in Right Ascension order in Table \ref{table_candidates}.  For each candidate, we provide (1) a source name, (2) the name of the source in MF97 if any,  (3,4) the position  (J2000), (5) the deprojected galactocentric distance (GCD), (6) the \ha\ flux as derived from the emission line images, (7) the \sii:\ha\ ratio measured from the images, (8) the spectrum we used to confirm the imaging ratios (see below), and (9) whether or not the object has a spectroscopic confirmation that the  \sii:\ha\ ratio is $\ge$ 0.4 (see below).
 
+\todo[inline]{We need a consistent story about the HII regions.  We mention that we selected some O3 objects.  We got spectra of 24 of these.   We have another 41 spectra of HII regions along the slit.  We got very few HII regions just by chance, though these are included in the 41.  It's hard to actually parse out the history of which are which.}
 
 \subsection{Spectroscopy; Emission-Line Fluxes}
 
@@ -365,7 +366,7 @@ We used the Gemini Multi-Object Spectrograph (GMOS) on the 8.2m Gemini-North tel
 For the 2014B program, we designed six custom masks, each with 20-30 slitlets targeting SNR candidates whose positions we determined from our 2011 WIYN images, together with  short $R$-band pre-images of several \gal\ fields taken with GMOS earlier in 2014 as part of the spectroscopy preparation program.    
 We used two additional masks (which we refer to as masks 7 and 8 for simplicity)  for the 2015B program.  Slitlets in one or more of our eight masks were placed on 102 distinct SNR candidates, including ones with a range of sizes, GCDs, and ISM environments (locations in arms and in 
 inter-arm regions).  In addition to the SNR candidates, we also placed a number of slitlets on prominent \hii\ regions for comparison purposes in both 2014 and 2015.
-Figure \ref{fig_overview} shows all the objects from the sample for which we obtained spectra (red boxes). 
+Figure \ref{fig_overview} shows all the SNR candidates from the sample for which we obtained spectra (red boxes). 
 
 For all the spectra we used GMOS-N with the 600 line\,mm$^{-1}$ grating designated G5307 and a GG455 cut-off filter to block second-order spectra.   The detector in both years was a mosaic of three e2v deep-depletion CCD chips, binned by 2 in the spatial direction (for a scale of 0\farcs 146 pixel$^{-1}$) and by 4 in the dispersion direction.  
 The dispersion was 1.84 \AA\,  pixel$^{-1}$ (binned), resulting in coverage of the spectral range from at least \hb\ through \sii\lamlam 6716,\,6731 for virtually all the objects.\footnote{The detailed wavelength coverage for individual objects naturally varied with slitlet position in the dispersion direction.}  Our  masks had  slitlet  widths from 1\farcs 25 to 1\farcs 75, with wider slits used for the larger objects, and lengths of 6\arcsec\ or longer to permit local background and sky subtraction.   
@@ -379,8 +380,8 @@ The data were processed using standard procedures  from the {\tt gemini} package
 Flux calibration was based on baseline GMOS observations of a few spectrophotometric standard stars, carried out in the same semester as part of standard GMOS operations.  
 %  IRAF footnote already given above, so I commented this out.  WPB
 %\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.}  
-During the processing, the 2-D spectra from different slitlets were separated to give individual 2-D spectra from each slitlet.   We examined each of these individually and selected the object region, as well as one or more sky background regions,  stripped out 1-D spectra of each, and then subtracted the sky spectrum from the corresponding object to obtain the final background-subtracted object spectra.
-Many of the objects are located in regions with bright surrounding galactic background (both continuum and emission lines) from NGC\,6946, so the selection of a representative local background was done on a best-effort basis.  
+During the processing, the 2-D spectra from different slitlets were separated to give individual 2-D spectra from each slitlet.   We examined each of these individually and selected the object region, as well as one or more sky background regions,  stripped out 1-D spectra of each, and then subtracted the sky spectrum from the corresponding object to obtain the final background-subtracted object spectra.  
+Many of the objects are located in regions with bright surrounding galactic background (both continuum and emission lines) from NGC\,6946, so the selection of a representative local background was done on a best-effort basis.    In addition to the targeted SNR candidates and HII regions, we extracted spectra from other HII regions which appeared by chance in the slits when this was possible.   This allowed us to increase our sample of HII regions from 24 to 65.
 We then performed  fits to obtain emission line fluxes  from the spectra, assuming Gaussian profiles.  We performed fits for various lines and line complexes:  \hb\ alone,  the \oiii\ doublet,  the \oi\ doublet,  the \ha-\nii\ region, and   the \sii\ doublet. For the fits, we assumed that the background varied linearly with wavelength around each line, and that the FWHM of all lines in each complex was the same.
 
 \todo[inline]{It would probably be good to include a figure showing a few example spectra, as in M83 paper, Fig 3.}
@@ -390,7 +391,7 @@ Table \ref{table_snr_spec}  lists the information we obtained for the SNR candid
 
 \section{Analysis and Discussion}
 
-We identified 147 candidate SNRs from the WIYN interference images; of these we obtained spectra of 102. The spectra were needed to improve our confidence that the \sii:\ha\ ratios of the emission nebulae were indeed high and to begin to characterize the SNRs using accurate line ratios.  The spectroscopic ratios are shown as a function of GCD in the left panel of  Fig.\ \ref{fig_s2_ha}. \hii\ regions and \oiii-selected objects are shown in blue while nominal \sii:\ha\ candidates from imaging are shown in red.   Conventionally, emission nebulae are identified as SNRs optically, if the \sii:\ha\ ratio exceeds 0.4; 89 of the 102 SNRs with spectra satisfy this criterion, and so we regard these as confirmed SNRs (and they have been listed as such in Table \ref{table_candidates}. Clearly, given uncertainties in derived line ratios for faint emission line objects, a dividing line of 0.4 is somewhat arbitrary, and objects just above (or just below) this ratio should be judged with more context.  For example, slightly under-subtracting contaminating \ha\ emission could readily explain why some candidates ended up below the threshold in the spectroscopic analysis. Likewise, a slight over-subtraction of \ha\ could enhance the \sii:\ha\ ratio derived, potentially pushing some objects above the threshold.  The observed tendency to see higher \sii:\ha\ ratios closer to the nucleus is likely to be at least partly an abundance effect; similar trends are seen in M33 \citep{long18} and in M83 \citep{winkler17}. 
+We identified 147 candidate SNRs from the WIYN interference images; of these we obtained spectra of 102. The spectra were needed to improve our confidence that the \sii:\ha\ ratios of the emission nebulae were indeed high and to begin to characterize the SNRs using accurate line ratios.  The spectroscopic ratios are shown as a function of \ha\ flux in the left panel of  Fig.\ \ref{fig_s2_ha}. \hii\ regions and \oiii-selected objects are shown in blue while nominal \sii:\ha\ candidates from imaging are shown in red.   Conventionally, emission nebulae are identified as SNRs optically, if the \sii:\ha\ ratio exceeds 0.4; 89 of the 102 SNRs with spectra satisfy this criterion, and so we regard these as confirmed SNRs (and they have been listed as such in Table \ref{table_candidates}. Clearly, given uncertainties in derived line ratios for faint emission line objects, a dividing line of 0.4 is somewhat arbitrary, and objects just above (or just below) this ratio should be judged with more context.  For example, slightly under-subtracting contaminating \ha\ emission could readily explain why some candidates ended up below the threshold in the spectroscopic analysis. Likewise, a slight over-subtraction of \ha\ could enhance the \sii:\ha\ ratio derived, potentially pushing some objects above the threshold.  The observed tendency to see higher \sii:\ha\ ratios closer to the nucleus is likely to be at least partly an abundance effect; similar trends are seen in M33 \citep{long18} and in M83 \citep{winkler17}. 
 
 There are 45 objects without spectra, so which of these are actually SNRs is uncertain.  That said, as shown in the right panel of Fig.\ \ref{fig_s2_ha}, if anything the spectroscopically-determined ratios tend to be higher than the ratios determined from narrow band imaging, and so most of the objects without spectra are also likely to be SNRs.  The somewhat higher spectroscopic ratios are to be expected, since even with our relatively narrow \ha\ filter , some emission from \nii\ was  also passed.   
 
@@ -405,9 +406,11 @@ Fig.\ \ref{fig_reddening} shows the observed \hb:\ha\ ratios of the SNR candidat
 
 \todo[inline]{Bill and Frank point out that various other diagrams with GC radius are missing, and in particular \sii:\ha\ ratio vs. \ha\ flux; \sii:\ha\ ratio vs. GCD (fig for this already here)  Check M83 to see if there is a correlation in the spectroscopic ratio with GCD, and if so comment on this.  This is done for S2; I guess we could to it for N2. Gradients: \nii:\ha\ and \sii:\ha\ vs GCD (M83 paper, fig 8) [WPB: Yes, I'd definitely like to see what this looks like.].  ksl: This is now provided, but whether these should be included is open to question.  If they are included some massaging of the plots is needed.  If included, Bill or Frank should provide words, and comparison to other galaxies}
 
-Some of the line ratios show indications of a metallicity gradient as evidenced in Fig. \ref{fig_metal_ratios}.  However, unlike the case in M33, what is seen in both the \nii:\ha\ and \sii:\ha\ ratio is that the upper envelope of both plots decreases with radius, but there are examples of SNRs with low ratios at all galactocentric distances.
+Some of the line ratios show indications of a metallicity gradient as evidenced in Fig. \ref{fig_metal_ratios}.  However, unlike the case in M33, what is seen in both the \nii:\ha\ and \sii:\ha\ ratio is that the upper envelope of both plots decreases with radius, but there are examples of SNRs with low ratios at all galactocentric distances.   There is a good correlation between the \nii:\ha\ and \sii:\ha\ ratios of the various object as shown in Fig. \ref{fig_s2_n2}.
 
 \todo[inline]{Frank and Bill have suggested that we do the comparison to models figures in the same way we did for M33 in L18, which includes plots not only of the models but also of where these ratios lie in other galaxies. See Figures 10 and 11 of L18. Bill also thinks the ratios are less than in M83 and wonders why that might be }
+
+
 
 Line ratios in spectra of SNRs are expected to vary both as a function of shock conditions and metallicity.  To see where the SNRs in \gal\ lie, we have compared the line ratios calculated from models by \cite{allen08} using the MAPPINGS III code for a range of shock velocities (100 - 1000 $\VEL$) and pre-shock magnetic fields (10$^{-4}$ - 10 $\mu$G).  The results are shown in Fig. \ref{fig_model}.  The results both for the ratio of [O~III]5007:\hb\ and for \sii:\ha\ fall squarely into the region of the solar metallicity models, as one would expect for \gal.
 
@@ -451,18 +454,6 @@ Much more work is needed to fully characterize the SNR population of \gal, some 
 
 We thank NASA for allowing us time to work on this.  PFW acknowledges additional support from the NSF through grant AST-1714281.
 
-\pagebreak
-
-\appendix
-
-\section{Possible additions to and notes concerning the paper
-}
-\todo[inline]{Frank put some questions about things one could to in the paper.  ksl has begun to delete them as they are worked off, or given as other inline comments, or if things are out of scope (e.g plots with SNR diameters for this paper.}
-Here are some figures we may wish to show, and points we may want to discuss (note: KSL has done some of these figures on Evernote; those all show \oiii-selected objects, which we may choose to omit):
-\begin{enumerate}
-    \item Correlation between flux from spectra vs imaging (M83 paper, fig 5)  ksl - I have looked at this.  The correlation is there but quite rough.  I'm not sure it is helpful for the paper
-
-\end{enumerate}
 
 \pagebreak
 
@@ -517,14 +508,14 @@ Here are some figures we may wish to show, and points we may want to discuss (no
 \end{figure}
 
 \begin{figure}
-\plottwo{fig_s2_ha_ratio_distance.pdf}{fig_spec_im_comp.pdf}
-\caption{Left: The \sii:\ha\ ratio obtained spectroscopically for SNR candidates (red) and \hii\ regions (blue) as a function of galactocentric distance, R.  Objects with ratios greater than 0.4 (the dashed line) are spectroscopically confirmed SNRs.  Objects near the dividing line are less certain because observational errors in the ratio and/or \hii\ contamination can impact the derived ratio. Right: The \sii:\ha\ ratio derived from spectra compared to that derived from narrow band imaging.  The tendency for spectroscopic ratios to be somewhat higher is consistent with mild impacts from \nii\ emission getting through the \ha\ imaging filter. (This figure needs a 1:1 line to guide the eye, and remove the dashed line at 0.4 for this one--Bill) \label{fig_s2_ha}}
+\plottwo{fig_s2_ha_ratio.pdf}{fig_spec_im_comp.pdf}
+\caption{Left: The \sii:\ha\ ratio obtained spectroscopically for SNR candidates (red) and \hii\ regions (blue) as a function of \ha flux in the spectrum.  Objects with ratios greater than 0.4 (the dashed line) are spectroscopically confirmed SNRs.  Objects near the dividing line are less certain because observational errors in the ratio and/or \hii\ contamination can impact the derived ratio. Right: The \sii:\ha\ ratio derived from spectra compared to that derived from narrow band imaging.  The tendency for spectroscopic ratios to be somewhat higher is consistent with mild impacts from \nii\ emission getting through the \ha\ imaging filter.  \label{fig_s2_ha}}
 
 \end{figure}
 
 \begin{figure}
 \plotone{fig_s2_ratio.pdf}
-\caption{The [S II]6717:[S II]6731 line ratio for SNR candidates as a function of galactocentric distance.  THis ratio is nominally a density diagnostic, and most candidates are near the low density limit of 1.4, indicating generally low ISM densities. Derived values above 1.4 are non-physical, and are indicative of errors in the derived ratio.  Only a handful of objects appear to show densities significantly above the low-density limit.  There is no obvious trend with galactocentric distance.  \label{fig_s2_ratio}}
+\caption{The [S II]6717:[S II]6731 line ratio for SNR candidates as a function of galactocentric distance.  This ratio is nominally a density diagnostic, and most candidates are near the low density limit of 1.4, indicating generally low ISM densities. Derived values above 1.4 are non-physical, and are indicative of errors in the derived ratio.  Only a handful of objects appear to show densities significantly above the low-density limit.  There is no obvious trend with galactocentric distance.  \label{fig_s2_ratio}}
 \end{figure}
 
 \begin{figure}
@@ -534,8 +525,13 @@ Here are some figures we may wish to show, and points we may want to discuss (no
 
 \begin{figure}
 \plottwo{fig_n2_ha_gc.pdf}{fig_s2_ha_gc.pdf}
-\caption{Line ratios as a function of GCD.  (I assume the right panel is actually \sii:\ha?  Also, maybe show the H II regions on these plots as well?  Bill) \label{fig_metal_ratios}}
+\caption{Line ratios of [N II]:\ha\ and [S II]:\ha\ as a function of GCD.  Both SNR candidates and HII regions are shown.     \label{fig_metal_ratios}}
 
+\end{figure}
+
+\begin{figure}
+\plotone{fig_s2_n2.pdf}
+\caption{A comparison of the line rations of [N II]:\ha\ to that of [S II]:\ha for the SNR candidates. \label{fig_s2_n2}}
 \end{figure}
 
 
