@@ -206,6 +206,7 @@
 \usepackage{natbib}
 \usepackage{comment}
 \usepackage{todonotes}
+\usepackage{graphicx}
 \begin{document}
 %\slugcomment{Draft \today}
 
@@ -343,7 +344,7 @@ Here we discuss a new, more sensitive optical search for SNRs in \gal\ in which 
 \section{Observations and Data Reduction \label{sec:observations}}
 \subsection{Imaging and Catalog of SNR Candidates}
 
-We carried out narrow-band imaging observations of \gal\ from the 3.5m WIYN telescope and MiniMosaic imager on Kitt Peak on the nights of 2011 June 26-28 (UT).  The so-called ``Minimo'' was mounted at the f/6.3 Nasmyth port and consisted of a pair of $2048\times4096$ SITe chips, with a field  9\farcm 6 square at a scale of 0\farcs 14 pixel$^{-1}$.  We used interference filters that pass lines of \ha, \sii \lamlam6716,6731, and \oiii \lam 5007, plus red and green narrow-band continuum filters so we could subtract the stars and produce pure emission-line images. Frames in each filter were dithered to enhance removal of cosmic rays and bad pixels.  Further observational details are given in Table 1.  It is noteworthy that the \ha\ filter has quite a narrow bandwidth, 27\ \AA\ FWHM. Its transmission is 69\% at the rest wavelength of \ha, but only 11\% at 6548\ \AA\ and 16\% at 6583\ \AA; hence, the \nii\ lines are greatly attenuated relative to \ha.\footnote{The recessional velocity of \gal\ is only $40 \kms$, so the lines are redshifted by $\lesssim 1$ \AA.}  This facilitates identification of SNRs based on their image-derived \sii:\ha\ ratios.  Seeing throughout this run was about $1\arcsec \approx 32$ pc at the distance of \gal.  While sufficient for identifying SNRs in all but the most crowded regions, this resolution could provide only crude diameter estimates and only for the larger objects.  
+We carried out narrow-band imaging observations of \gal\ from the 3.5m WIYN telescope and MiniMosaic imager on Kitt Peak on the nights of 2011 June 26-28 (UT).\footnote{The WIYN Observatory is a joint facility of the University of Wisconsin-Madison, Indiana University, the National Optical Astronomy Observatory and the University of Missouri.}  The so-called ``Minimo'' was mounted at the f/6.3 Nasmyth port and consisted of a pair of $2048\times4096$ SITe chips, with a field  9\farcm 6 square at a scale of 0\farcs 14 pixel$^{-1}$.  We used interference filters that pass lines of \ha, \sii \lamlam6716,6731, and \oiii \lam 5007, plus red and green narrow-band continuum filters so we could subtract the stars and produce pure emission-line images. Frames in each filter were dithered to enhance removal of cosmic rays and bad pixels.  Further observational details are given in Table 1.  It is noteworthy that the \ha\ filter has quite a narrow bandwidth, 27\ \AA\ FWHM. Its transmission is 69\% at the rest wavelength of \ha, but only 11\% at 6548\ \AA\ and 16\% at 6583\ \AA; hence, the \nii\ lines are greatly attenuated relative to \ha.\footnote{The recessional velocity of \gal\ is only $40 \kms$, so the lines are redshifted by $\lesssim 1$ \AA.}  This facilitates identification of SNRs based on their image-derived \sii:\ha\ ratios.  Seeing throughout this run was about $1\arcsec \approx 32$ pc at the distance of \gal.  While sufficient for identifying SNRs in all but the most crowded regions, this resolution could provide only crude diameter estimates and only for the larger objects.  
 
 
 We used standard IRAF\footnote{IRAF is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under cooperative agreement with the National Science Foundation.} techniques for processing the images, including overscan correction, bias subtraction, and flat-fielding using dome flats.  Procedures in the IRAF {\texttt mscred} package were then used to combine the data from the individual chips into a mosaic image for each frame, assigned a WCS for each using stars from the USNOB1 catalog (WPB: ref needed?).  We then stacked  all the images by filter onto an arbitrary standard coordinate system with a scale of 0\farcs 20 pixel$^{-1}$ and scaled and subtracted the continuum images from the emission-line ones (red from \ha\ and \sii; green from \oiii) to give pure emission-line images with most of the stars and galaxy background light removed.  Finally, we used observations of several spectrophotometric standard stars from the catalog of \citet{massey88} to flux calibrate the emission-line images.  Figure \ref{fig_overview} shows a color version of the final images (R = \ha, G = \sii, B = \oiii).
@@ -460,7 +461,9 @@ Much more work is needed to fully characterize the SNR population of \gal, some 
 
 \acknowledgments
 
-We thank NASA for allowing us time to work on this.  PFW acknowledges additional support from the NSF through grant AST-1714281.
+\todo[inline]{Any additional acknowledgements?}
+
+Our WYIN images were obtained at Kitt Peak National Observatory, National Optical Astronomy Observatory (NOAO Prop. ID 11A-0110; PI: PF. Winkler), which is operated by the Association of Universities for Research in Astronomy (AURA) under a cooperative agreement with the National Science Foundation. The spectra were obtained at the Gemini Observatory (Gemini Prop. IDs GN-2014A-Q-84,GN-2014B-Q-83, GN-2015B-Q-91; PI: PF Winkler, which is operated by the Association of Universities for Research in Astronomy, Inc., under a cooperative agreement with the NSF on behalf of the Gemini partnership: the National Science Foundation (United States), National Research Council (Canada), CONICYT (Chile), Ministerio de Ciencia, Tecnolog\'{i}a e Innovaci\'{o}n Productiva (Argentina), Minist\'{e}rio da Ci\^{e}ncia, Tecnologia e Inova\c{c}\~{a}o (Brazil), and Korea Astronomy and Space Science Institute (Republic of Korea).  Partial support for the analysis of the data was provided by NASA through grant number HST-GO-14638 from the Space Telescope Science Institute, which is operated by AURA, Inc., under NASA contract NAS 5-26555.. PFW acknowledges additional support from the NSF through grant AST-1714281.
 
 
 \pagebreak
@@ -520,21 +523,21 @@ We thank NASA for allowing us time to work on this.  PFW acknowledges additional
 \caption{Franks's new figure. This needs to be integrated into the text \label{fig_overview}}
 \end{figure}
 
-\begin{figure}
-\caption{\bf Place holder for Bill's small area figure. \label{fig_example_image}}
-\end{figure}
+
 
 \begin{figure}
 \plotone{fig_N6946_diagnostic.pdf}
+% \plotone{f}
 \caption{This figure (placeholder) demonstrates the diagnostic process used to find SNR candidates in NGC~6946.  The region shown is 35\arcsec\ in the N-S dimension and is centered $\sim$1.5\arcmin\ south of the nucleus.  At upper left is a star-subtracted \sii\ image for reference.  At upper right, we show a color image of subtracted emission line images, where red is H$\alpha$, green is \sii, and blue is \oiii.  Bottom left shows the \sii:H$\alpha$ ratio image of the region, where elevated values of the  ratio are white and low values are black.  The lower right image shows the green continuum image, which is useful for identifying the presence of stellar subtraction residuals.  The red circles are 4\arcsec\ in diameter and show two MF objects and four newly identified SNR candidates from our survey.  Note the appearance in the ratio image, where most of the emission nebulae show low ratios, but the objects in the red circles stand out in the ratio.  The coloration differences in the upper right panel are due to relatively stronger \sii\ and/or \oiii\ emission from the SNR candidates compared with the photoionized gas. \label{fig_diagnostic}}
 \end{figure}
 
 \begin{figure}
 \plotone{fig_example_spectra.pdf}
-\caption{Examples of the spectra obtained for three representative SNR candidates and one \hii\ region.  The three SNR spectra were selected to illustrate the quality of the spectra for a bright, medium bright and fairly faint candidate.  \label{fig_spectra}}
+\caption{Examples of the spectra obtained for three representative SNR candidates and one \hii\ region.  The three SNR spectra were selected to illustrate the quality of the spectra for a bright, medium bright and fairly faint candidate.  \label{fig_example_spectra}}
 \end{figure}
 
 \begin{figure}
+
 \plottwo{fig_s2_ha_ratio.pdf}{fig_spec_im_comp.pdf}
 \caption{Left: The \sii:\ha\ ratio obtained spectroscopically for SNR candidates (red) and \hii\ regions (blue) as a function of \ha flux in the spectrum.  Objects with ratios greater than 0.4 (the dashed line) are spectroscopically confirmed SNRs.  Objects near the dividing line are less certain because observational errors in the ratio and/or \hii\ contamination can impact the derived ratio. Right: The \sii:\ha\ ratio derived from spectra compared to that derived from narrow band imaging.  The tendency for spectroscopic ratios to be somewhat higher is consistent with mild impacts from \nii\ emission getting through the \ha\ imaging filter.  \label{fig_s2_ha}}
 
